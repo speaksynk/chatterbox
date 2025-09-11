@@ -28,6 +28,7 @@ dependencies = [
 [project.optional-dependencies]
 cpu = ["torch==2.6.0", "torchaudio==2.6.0"]
 cuda126 = ["torch==2.6.0+cu126", "torchaudio==2.6.0+cu126"]
+cuda118 = ["torch==2.6.0+cu118", "torchaudio==2.6.0+cu118"]
 
 [project.urls]
 Homepage = "https://github.com/resemble-ai/chatterbox"
