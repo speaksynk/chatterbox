@@ -46,7 +46,8 @@ class T3(nn.Module):
             hp = T3Config.english_only()  # Default to English-only config for backward compatibility
         super().__init__()
         self.hp = hp
-        self.cfg = LlamaConfig(**LLAMA_CONFIGS[hp.llama_config_name])
+        self.cfg = LlamaConfig(**LLAMA_CONFIGS[hp.llama_config_name])        # optional: ensure attentions are returned)
+        
         self.tfmr = LlamaModel(self.cfg)
         self.dim = self.cfg.hidden_size
         self.deepspeed_patch_applied = False

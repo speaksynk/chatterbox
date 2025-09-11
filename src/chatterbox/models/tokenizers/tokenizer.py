@@ -122,7 +122,7 @@ def add_hebrew_diacritics(text: str) -> str:
     try:
         if _dicta is None:
             from dicta_onnx import Dicta
-            _dicta = Dicta()
+            _dicta = Dicta('/dicta-1.0.onnx')
         
         return _dicta.add_diacritics(text)
         
